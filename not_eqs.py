@@ -23,7 +23,7 @@ eq_list4 = """~EQ SHEET [page 4]~
 [9] circle_eqs
 [10] NULL 
 [11] NULL
-[98] fist page 
+[98] first page 
 [99] EXIT"""
 
 max_page = 4
