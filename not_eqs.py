@@ -20,17 +20,21 @@ eq_list3 = """~EQ SHEET [page 3]~
 [99] EXIT"""
 
 eq_list4 = """~EQ SHEET [page 4]~
-[9] circle_eqs
-[10] NULL 
+[9] simple circle eq
+[10] circle eqs
 [11] NULL
 [98] first page 
 [99] EXIT"""
 
+#max 21 chars per line
+
 max_page = 4
-max_in = 9
+max_in = 10
 next_page = 98
 exit = 99
-c_eqs = 9
+
+bc_eqs = 9
+c_eqs = 10
 
 
 
@@ -99,8 +103,9 @@ def display_eq(choice):
     #eq lists:
     #circle eqs
 
+    bc_list = """A=(pie)r^2\nC=2(pie)r"""   
     c_list = """(x-a)^2+(y-b)^2=r^2\nS=r(theta)\nA=1/2r^2(theta)"""
-            
+
     #all the eqs
     eq_list = ["-b+-(b^2-(4ac))\n/2a", #quad
             "b^2-4ac", #dis
@@ -116,7 +121,10 @@ def display_eq(choice):
     if choice == c_eqs:
         print(c_list)
 
-    if choice != exit and choice != c_eqs:
+    elif choice == bc_eqs:
+        print(bc_list)
+
+    else:
         print(eq_list[choice])
 
 
