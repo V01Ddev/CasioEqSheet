@@ -1,6 +1,6 @@
 eq_list1 = """~EQ SHEET [page 1]~
 [0] quad formula 
-[1] discrimnate 
+[1] discriminate 
 [2] cos rule
 [98] next page
 [99] EXIT"""
@@ -107,7 +107,7 @@ def display_eq(choice):
     c_list = """(x-a)^2+(y-b)^2=r^2\nS=r(theta)\nA=1/2r^2(theta)"""
 
     #all the eqs
-    eq_list = ["-b+-(b^2-(4ac))\n/2a", #quad
+    eq_list = ["-b+-sqrt(b^2-(4ac))\n-------------------\n        2a", #quad
             "b^2-4ac", #dis
             "a^2=b^2+c^2-2bc*cosA", #cos rule
             "MID=((x1+x2)/2,\n    (y1+y2)/2)", #mid
@@ -145,3 +145,4 @@ def main():
 
 
 main()
+
