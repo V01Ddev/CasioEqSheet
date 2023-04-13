@@ -104,7 +104,7 @@ def display_eq(choice):
     #circle eqs
 
     bc_list = """A=(pie)r^2\nC=2(pie)r"""   
-    c_list = """(x-a)^2+(y-b)^2=r^2\nS=r(theta)\nA=1/2r^2(theta)"""
+    c_list = """(x-a)^2+(y-b)^2=r^2\nS=r(theta)\nA=1/2r^2(theta)\nArcLen=C*(theta)/360"""
 
     #all the eqs
     eq_list = ["-b+-sqrt(b^2-(4ac))\n-------------------\n        2a", #quad
