@@ -22,11 +22,11 @@ eq_list3 = """~EQ SHEET [page 3]~
 eq_list4 = """~EQ SHEET [page 4]~
 [9] simple circle eq
 [10] circle eqs
-[11] NULL
+[11] suvat
 [98] first page 
 [99] EXIT"""
 
-#max 21 chars per line
+# Max 21 chars per line
 
 max_page = 4
 max_in = 10
@@ -35,6 +35,7 @@ exit = 99
 
 bc_eqs = 9
 c_eqs = 10
+suvat = 11
 
 
 
@@ -79,7 +80,7 @@ def getting_in():
 
             sheet_count += 1
             
-            # resets page once max is reached
+            # Resets page once max is reached
             if sheet_count == max_page + 1:
                 sheet_count = 1
 
@@ -99,23 +100,28 @@ def getting_in():
 
 def display_eq(choice):
 
-    #max 21 chars per line
-    #eq lists:
-    #circle eqs
+    # 21 chars per line
+    # 6 line
 
+    # EQ lists:
+
+    # Circle eqs
     bc_list = """A=(pie)r^2\nC=2(pie)r"""   
     c_list = """(x-a)^2+(y-b)^2=r^2\nS=r(theta)\nA=1/2r^2(theta)\nArcLen=C*(theta)/360"""
+    
+    # Suvat eqs
+    suvat_list = """v^2=u+at\nv^2=u^2+2as\ns=ut+1/2at^2\ns=vt-1/2at^2\ns=1/2(u+v)t"""
 
-    #all the eqs
-    eq_list = ["-b+-sqrt(b^2-(4ac))\n-------------------\n        2a", #quad
-            "b^2-4ac", #dis
-            "a^2=b^2+c^2-2bc*cosA", #cos rule
-            "MID=((x1+x2)/2,\n    (y1+y2)/2)", #mid
-            "tanx=sinx/cosx", #tan iden
-            "sin^2(x)+cos^2(x)=1", #cossin iden
-            "SIN:(a or 180-a)+k360", #SIN
-            "COS:(a or -a)+k360", #COS
-            "TAN:(a) + k180", #TAN
+    # All the other eqs
+    eq_list = ["-b+-sqrt(b^2-(4ac))\n-------------------\n        2a", # Quad
+            "b^2-4ac", # Dis
+            "a^2=b^2+c^2-2bc*cosA", # Cos rule
+            "MID=((x1+x2)/2,\n    (y1+y2)/2)", # Mid
+            "tanx=sinx/cosx", # Tan iden
+            "sin^2(x)+cos^2(x)=1", # Cossin iden
+            "SIN:(a or 180-a)+k360", # SIN
+            "COS:(a or -a)+k360", # COS
+            "TAN:(a) + k180", # TAN
             ]
 
     if choice == c_eqs:
@@ -123,6 +129,9 @@ def display_eq(choice):
 
     elif choice == bc_eqs:
         print(bc_list)
+
+    elif choice == suvat:
+        print(suvat_list)
 
     else:
         print(eq_list[choice])
@@ -145,4 +154,3 @@ def main():
 
 
 main()
-
