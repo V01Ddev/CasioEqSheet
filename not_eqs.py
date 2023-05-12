@@ -29,7 +29,7 @@ eq_list4 = """~EQ SHEET [page 4]~
 # Max 21 chars per line
 
 max_page = 4
-max_in = 10
+max_in = 11
 next_page = 98
 exit = 99
 
