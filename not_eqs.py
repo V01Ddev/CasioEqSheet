@@ -75,6 +75,7 @@ def getting_in():
     while True:
 
         uin = None
+
         try:
             uin = int(input("--> "))
 
@@ -97,10 +98,9 @@ def getting_in():
 
         elif uin <= max_in or uin == exit:
             return uin
-        break
 
-    else:
-        print("input invalid")
+        else:
+            print("input invalid")
             input("~enter~")
             print(menu_out(sheet_count))
 
